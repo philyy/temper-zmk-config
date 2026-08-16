@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: temper}
 layers:
-  default:
+  base:
   - - Q
     - W
     - F
@@ -10,7 +10,63 @@ layers:
     - L
     - U
     - Y
-    - {t: '''', s: '"'}
+    - {t: ;, s: ':'}
+  - - {t: A, h: ⌃}
+    - {t: R, h: ⎇}
+    - {t: S, h: ⌘}
+    - {t: T, h: ⇧}
+    - G
+    - M
+    - {t: N, h: ⇧}
+    - {t: E, h: ⌘}
+    - {t: I, h: ⎇}
+    - {t: O, h: ⌃}
+  - - {t: Z, h: button}
+    - {t: X, h: ⎇}
+    - C
+    - D
+    - V
+    - K
+    - H
+    - {t: ',', s: <}
+    - {t: ., h: ⎇, s: '>'}
+    - {t: /, h: button}
+  - - {t: ESC, h: media}
+    - {t: SPACE, h: nav}
+    - {t: ↹, h: mouse}
+    - {t: RET, h: sym}
+    - {t: BSPC, h: num}
+    - {t: DEL, h: fun}
+  extra:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: ⌘}
+    - {t: S, h: ⎇}
+    - {t: D, h: ⌃}
+    - {t: F, h: ⇧}
+    - G
+    - H
+    - {t: J, h: ⇧}
+    - {t: K, h: ⌃}
+    - {t: L, h: ⎇}
+    - {t: '''', h: ⌘}
+  - - {t: Z, h: button}
+    - {t: X, h: ⎇}
+    - C
+    - V
+    - B
+    - N
+    - M
+    - {t: ',', s: <}
+    - {t: ., h: ⎇, s: '>'}
+    - {t: /, h: button}
+  - - {t: ESC, h: media}
+    - {t: SPACE, h: nav}
+    - {t: ↹, h: mouse}
+    - {t: RET, h: sym}
+    - {t: BSPC, h: num}
+    - {t: DEL, h: fun}
+  tap:
+  - [Q, W, F, P, B, J, L, U, Y, '''']
   - [A, R, S, T, G, M, N, E, I, O]
   - - Z
     - X
@@ -19,188 +75,128 @@ layers:
     - V
     - K
     - H
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
-    - {t: '?', s: '!'}
-  - - cmd
-    - num
-    - {t: ⇧, s: ⇪}
-    - SPACE
-    - nav
-    - {t: default, h: toggle}
-  game:
-  - - ↹
-    - Q
-    - W
-    - E
-    - R
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⇧
-    - A
-    - S
-    - D
-    - F
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⌃
-    - Z
-    - X
-    - C
-    - V
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ESC
-    - {t: ▽, type: trans}
-    - SPACE
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  num:
-  - - '~'
-    - '@'
-    - '{'
-    - '}'
-    - '%'
-    - '*'
-    - '7'
-    - '8'
-    - '9'
-    - {t: '-', s: _}
-  - [^, '#', (, ), $, _, '4', '5', '6', +]
-  - - {t: '&', s: '|'}
-    - <
-    - {t: '[', s: '{'}
-    - {t: ']', s: '}'}
-    - '>'
-    - {t: /, s: \}
-    - '1'
-    - '2'
-    - '3'
-    - {t: '=', s: +}
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - '0'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: ',', s: <}
+    - {t: ., s: '>'}
+    - /
+  - [ESC, SPACE, ↹, RET, BSPC, DEL]
+  button:
+  - [⌘Z, ⌘X, ⌘C, ⌘V, Sft+Gui+Z, Sft+Gui+Z, ⌘V, ⌘C, ⌘X, ⌘Z]
+  - [⌘, ⎇, ⌃, ⇧, '', '', ⇧, ⌃, ⎇, ⌘]
+  - - {t: ⌘Z, type: held}
+    - ⌘X
+    - ⌘C
+    - ⌘V
+    - Sft+Gui+Z
+    - Sft+Gui+Z
+    - ⌘V
+    - ⌘C
+    - ⌘X
+    - ⌘Z
+  - ['&mkp MCLK', '&mkp LCLK', '&mkp RCLK', '&mkp RCLK', '&mkp LCLK', '&mkp MCLK']
   nav:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - DEL
-    - HOME
-    - END
-    - ↹
-    - BSPC
-  - - {t: ⇧, h: sticky}
-    - {t: ⌃, h: sticky}
-    - {t: ⎇, h: sticky}
-    - {t: ⌘, h: sticky}
-    - {t: ▽, type: trans}
+  - ['&u_td_boot', '&u_td_tap', '&u_td_extra', '&u_td_base', Sft+Gui+Z, Sft+Gui+Z, ⌘V, ⌘C, ⌘X, ⌘Z]
+  - - ⌃
+    - ⎇
+    - ⌘
+    - ⇧
+    - Gui+S
+    - {t: ⇪, s: CAPS}
     - ←
     - ↓
     - ↑
     - →
-    - {t: ESC, s: '`'}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - RET
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - [⌘Z, ⌘X, ⌘C, '', ⌘V, INS, HOME, PG DN, PG UP, END]
+  - - ''
     - {type: held}
-    - {t: ▽, type: trans}
-  fun:
-  - - {t: game, h: toggle}
-    - MUTE
-    - VOL DN
-    - VOL UP
-    - OUT USB
-    - {t: ▽, type: trans}
-    - F7
-    - F8
-    - F9
-    - F12
-  - - {t: BT, h: '0'}
+    - ''
+    - RET
+    - BSPC
+    - DEL
+  mouse:
+  - ['&u_td_boot', '&u_td_tap', '&u_td_extra', '&u_td_base', '', Sft+Gui+Z, ⌘V, ⌘C, ⌘X, ⌘Z]
+  - [⌃, ⎇, ⌘, ⇧, '', '', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT']
+  - ['', ⎇, '&u_td_sym', '&u_td_mouse', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '&msc SCRL_UP', '&msc SCRL_RIGHT']
+  - - ''
+    - ''
+    - {type: held}
+    - '&mkp RCLK'
+    - '&mkp LCLK'
+    - '&mkp MCLK'
+  media:
+  - - '&u_td_boot'
+    - '&u_td_tap'
+    - '&u_td_extra'
+    - '&u_td_base'
+    - ''
+    - BT CLR
+    - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
-    - {t: ▽, type: trans}
-    - F4
-    - F5
-    - F6
-    - F11
-  - - BT CLR
-    - PREV
-    - PP
-    - NEXT
-    - OUT BLE
-    - {t: ▽, type: trans}
-    - F1
-    - F2
-    - F3
-    - F10
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-  cmd:
-  - - ⌘Q
-    - ⌘W
-    - F
-    - Gui+P
-    - B
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⇧
-    - ⌃
-    - ⎇
-    - ⌘
-    - Gui+G
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⌘Z
-    - ⌘X
-    - ⌘C
-    - D
-    - ⌘V
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - [⌃, ⎇, ⌘, ⇧, '', '', PREV, VOL DN, VOL UP, NEXT]
+  - ['', ⎇, '&u_td_fun', '&u_td_media', '', OUT TOG, '', '', '', '']
   - - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - STOP
+    - PP
+    - 'VOL
+
+      MUTE'
+  num:
+  - - {t: '[', s: '{'}
+    - '7'
+    - '8'
+    - '9'
+    - {t: ']', s: '}'}
+    - ''
+    - '&u_td_base'
+    - '&u_td_extra'
+    - '&u_td_tap'
+    - '&u_td_boot'
+  - - ''''
+    - '4'
+    - '5'
+    - '6'
+    - {t: '=', s: +}
+    - ''
+    - ⇧
+    - ⌘
+    - ⎇
+    - ⌃
+  - - {t: '`', s: '~'}
+    - '1'
+    - '2'
+    - '3'
+    - \
+    - ''
+    - '&u_td_num'
+    - '&u_td_nav'
+    - ⎇
+    - ''
+  - - {t: ., s: '>'}
+    - '0'
+    - {t: '-', s: _}
+    - ''
+    - {type: held}
+    - ''
+  sym:
+  - ['{', '&', '*', '!', '}', '', '&u_td_base', '&u_td_extra', '&u_td_tap', '&u_td_boot']
+  - ['"', KP EQUAL, _, $, KP PLUS, '', ⇧, ⌘, ⎇, ⌃]
+  - ['~', <, KP MINUS, '>', '|', '', '%', '#', ^, '']
+  - - (
+    - )
+    - '@'
+    - {type: held}
+    - ''
+    - ''
+  fun:
+  - [F12, F7, F8, F9, PSCRN, '', '&u_td_base', '&u_td_extra', '&u_td_tap', '&u_td_boot']
+  - [F11, F4, F5, F6, SLCK, '', ⇧, ⌘, ⎇, ⌃]
+  - [F10, F1, F2, F3, PAUSE BREAK, '', '&u_td_fun', '&u_td_media', ⎇, '']
+  - - APP
+    - SPACE
+    - ↹
+    - ''
+    - ''
+    - {type: held}
