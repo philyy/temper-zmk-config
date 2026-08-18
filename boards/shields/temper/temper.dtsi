@@ -32,6 +32,10 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
+        // Required for wake from deep sleep: without it, zmk_pm_suspend_devices()
+        // disconnects every matrix GPIO before sys_poweroff(), so no keypress can
+        // generate the SENSE event needed to wake the board.
+        wakeup-source;
 
         diode-direction = "col2row";
         row-gpios
